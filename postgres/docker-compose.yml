@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  postgres-dev:
+    image: postgres:alpine3.16
+    container_name: postgres-container
+    hostname: postgres-dev
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=some_db
+    volumes:
+      - /workdir/data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  pgadmin:
+    image: dpage/pgadmin4:6.10
+    container_name: pgadmin-container
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+    ports:
+      - 5050:80

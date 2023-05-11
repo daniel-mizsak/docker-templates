@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  ubuntu-image:
+    build: .
+    image: ubuntu-image
+    container_name: ubuntu-container
+    hostname: ubuntu-dev
+    volumes:
+      - ./workdir:/workdir
+    tty: true
