@@ -1,11 +1,9 @@
 FROM python:3.9
 
-WORKDIR /app
+WORKDIR /workdir
 
-COPY ./app/ .
+COPY ./workdir/ .
 
 RUN pip install --no-cache-dir --upgrade -r ./requirements.txt
 
-ENTRYPOINT ["python"]
-
-CMD ["main.py"]
+CMD ["python", "main.py"]

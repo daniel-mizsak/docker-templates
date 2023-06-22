@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  pygame:
+    build: .
+    container_name: pygame-app
+    environment:
+      - DISPLAY=host.docker.internal:0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix

@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-    flask-app:
+    flask:
         build: .
         container_name: flask-app
         stop_signal: SIGINT

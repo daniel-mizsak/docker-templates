@@ -1,1 +1,1 @@
-docker-compose -f ./docker-compose.yml run --rm python-app
+docker-compose -f ./docker-compose.yaml run --rm python-app
